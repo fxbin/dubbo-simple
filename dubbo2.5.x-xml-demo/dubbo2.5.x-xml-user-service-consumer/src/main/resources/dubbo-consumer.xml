@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="dubbo2.5.x-xml-user-service-consumer" />
+
+    <dubbo:protocol name="dubbo" dispatcher="all" port="-1" threadpool="cached" threads="1500"/>
+
+    <dubbo:registry id="dubbo2.5.x-xml-user-service" address="zookeeper://127.0.0.1:2181" check="false"/>
+
+    <dubbo:reference registry="dubbo2.5.x-xml-user-service" id="userRpcService"
+                   interface="cn.fxbin.dubbo.user.api.UserRpcService"
+                   check="false"
+                   timeout="30000"/>
+
+
+</beans>

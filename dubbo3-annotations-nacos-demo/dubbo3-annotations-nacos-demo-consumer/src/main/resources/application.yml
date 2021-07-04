@@ -1,0 +1,21 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /user-consumer
+
+spring:
+  application:
+    name: dubbo3-annotations-nacos-demo-consumer
+
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    address: nacos://127.0.0.1:8848
+    check: false
+  consumer:
+    timeout: 10000
+    # 开启 Consumer 的参数校验
+    validation: true
+    UserRpcService:
+      version: 1.0.0

@@ -1,0 +1,27 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /user-provider
+
+spring:
+  application:
+    name: dubbo2.7x-annotations-zk-demo-provider
+
+
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    timeout: 30000
+  protocol:
+    port: -1
+    name: dubbo
+  provider:
+    timeout: 1000
+    UserRpcService:
+      version: 1.0.0
+  # 配置扫描 Dubbo 自定义的 @Service 注解，暴露成 Dubbo 服务提供者
+  scan:
+    base-packages: cn.fxbin.dubbo.user.service
+

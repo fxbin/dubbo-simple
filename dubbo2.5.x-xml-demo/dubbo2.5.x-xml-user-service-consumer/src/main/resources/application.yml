@@ -1,0 +1,11 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /user-consumer
+
+spring:
+  application:
+    name: dubbo2.5.x-xml-user-serivce-consumer
+logging:
+  level:
+    com.alibaba: debug

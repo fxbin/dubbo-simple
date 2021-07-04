@@ -1,0 +1,32 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /user-provider
+
+spring:
+  application:
+    name: dubbo3-annotations-nacos-demo-provider
+
+
+dubbo:
+  application:
+    name: ${spring.application.name}
+    logger: slf4j
+  registry:
+    address: nacos://127.0.0.1:8848
+    timeout: 30000
+  protocol:
+    port: -1
+    name: dubbo
+  provider:
+    filter: -exception
+    # 开启 Provider 参数校验
+    validation: true
+    # 服务的版本号
+    version: 1.0.0
+    UserRpcService:
+      version: 1.0.0
+  # 配置扫描 Dubbo 自定义的 @Service 注解，暴露成 Dubbo 服务提供者
+  scan:
+    base-packages: cn.fxbin.dubbo.user.service
+

@@ -1,0 +1,19 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /user-consumer
+
+spring:
+  application:
+    name: dubbo2.7x-annotations-nacos-demo-consumer
+
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    address: nacos://127.0.0.1:8848
+    check: false
+  consumer:
+    timeout: 1000
+    UserRpcService:
+      version: 1.0.0

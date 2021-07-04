@@ -1,0 +1,19 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /user-consumer
+
+spring:
+  application:
+    name: dubbo2.7x-annotations-zk-demo-consumer
+
+
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  consumer:
+    timeout: 1000
+    UserRpcService:
+      version: 1.0.0
