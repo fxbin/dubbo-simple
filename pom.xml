@@ -34,7 +34,7 @@
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
 
         <knife4j.version>3.0.3</knife4j.version>
-        <dubbo.version>3.0.0</dubbo.version>
+        <dubbo.version>3.0.1</dubbo.version>
         <hutool.version>5.7.2</hutool.version>
         <lombok.version>1.18.20</lombok.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
