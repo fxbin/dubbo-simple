@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dubbo3-annotations-nacos-demo</artifactId>
+    <artifactId>dubbo3.x-annotations-nacos-demo</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>dubbo3-annotations-nacos-demo-provider</module>
-        <module>dubbo3-annotations-nacos-demo-consumer</module>
+        <module>dubbo3.x-annotations-nacos-demo-provider</module>
+        <module>dubbo3.x-annotations-nacos-demo-consumer</module>
     </modules>
 
     <properties>

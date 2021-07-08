@@ -42,12 +42,13 @@
     </properties>
 
     <modules>
-        <module>dubbo2.5.x-xml-demo</module>
-        <module>dubbo-rpc-user-service-api</module>
         <module>framework</module>
+
+        <module>dubbo-rpc-user-service-api</module>
+        <module>dubbo2.5.x-xml-demo</module>
         <module>dubbo2.7.x-annotations-zk-demo</module>
         <module>dubbo2.7.x-annotations-nacos-demo</module>
-        <module>dubbo3-annotations-nacos-demo</module>
+        <module>dubbo3.x-annotations-nacos-demo</module>
     </modules>
 
     <dependencyManagement>
@@ -268,6 +269,7 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
                     <configuration>
                         <fork>true</fork>
                         <addResources>true</addResources>
